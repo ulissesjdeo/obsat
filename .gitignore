@@ -1,0 +1,8 @@
+.idea**
+.idea*
+data**
+data*
+photos**
+photos*
+yolov3.pt
+debug.lock
