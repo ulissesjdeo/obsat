@@ -10,8 +10,7 @@ def capture(timestamp):
     cam = PiCamera()
     cam.resolution = (1024, 768)
     cam.brightness = 60
-
-    cama.start_preview()
+    cam.start_preview()
     sleep(5)
     cam.capture(file)
     cam.stop_preview()
