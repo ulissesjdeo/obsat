@@ -1,9 +1,8 @@
 .idea**
 .idea*
-data**
-data*
-photos**
-photos*
+data/**
+data/*
+photos/**
+photos/*
 yolov3.pt
 debug.lock
-address.config
