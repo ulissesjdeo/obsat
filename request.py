@@ -6,7 +6,7 @@ from sys import argv
 if not exists('debug.lock'):
     url = open('config/address.cfg', 'r').read()
 else:
-    url = https://obsat.org.br/teste_post/envio.php # https://obsat.org.br/teste_post/index.php
+    url = 'https://obsat.org.br/teste_post/envio.php' # https://obsat.org.br/teste_post/index.php
 
 filename = argv[1]
 content = open(filename, 'r').read()
