@@ -2,14 +2,12 @@ from calendar import timegm
 from os.path import exists
 from time import gmtime
 
+
 if not exists('debug.lock'):
     DEBUG = False
-else:
-    DEBUG = True
-
-if not DEBUG:
     from modules import battery, temperature, position, camera, json, image
 else:
+    DEBUG = True
     from modules import json, image
 
 if __name__ == '__main__':
@@ -23,7 +21,7 @@ if __name__ == '__main__':
         battery = 95
         temperature = 25
         position = {"g": [-0.298, -0.298, -0.298], "a": [-0.298, -0.298, -0.298]}
-        file = 'debug.jpg'
+        file = 'other/debug.jpg'
 
     people = image.analyze(file, timestamp)
 
