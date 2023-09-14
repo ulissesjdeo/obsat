@@ -1,1 +1,0 @@
-Fazer uma sistema com integrais para definir a ocupação das praias a partir da posição das pessoas e sua tendência de movimentação com base em horários e posição ao longo do tempo
