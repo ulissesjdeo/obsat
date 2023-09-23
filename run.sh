@@ -1,4 +1,4 @@
-cd /home/obsat/obsat
+cd /home/obsat/obsat || exit
 python app.py
-filename=data/`ls -Art data/ | tail -n 1`
-python request.py $filename
+filename=data/$(find /sample_directory -type f -exec ls -t1 {} + | head -1)
+python request.py "$filename"

@@ -1,7 +1,6 @@
 from imageai.Detection import ObjectDetection
-from os import getcwd, remove
 from os.path import join
-from glob import glob
+from os import getcwd
 
 
 def analyze(file, timestamp):
@@ -18,6 +17,7 @@ def analyze(file, timestamp):
     )
 
     for obj in detections:
+        # noinspection PyTypeChecker
         if obj['name'] == 'person' or obj['name'] == 'umbrella':
             amount += 1  # amount.append(f"{obj['name']} with {obj['percentage_probability']}")
     return amount
