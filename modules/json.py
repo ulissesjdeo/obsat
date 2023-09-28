@@ -4,7 +4,7 @@ def finalize(battery, temperature, position, people, pression):
             f'  "bateria": {battery},\n'
             f'  "temperatura": {temperature},\n'
             f'  "pressao": {pression},\n'
-            '  "giroscopio": {\n    "x": ' + f'{position["g"][0]}' + ',\n    "y": ' + f'{position["g"][1]}' + ',\n    "z": ' + f'{position["g"][2]}' + '\n  },\n'
-            '  "acelerometro": {\n    "x": ' + f'{position["a"][0]}' + ',\n    "y": ' + f'{position["a"][1]}' + ',\n    "z": ' + f'{position["a"][2]}' + '\n  },\n'
+            f'  "giroscopio": [{position["g"][0]}, {position["g"][1]}, {position["g"][2]}],\n'
+            f'  "acelerometro": [{position["a"][0]}, {position["a"][1]}, {position["a"][2]}],\n'
             '  "payload": {\n' + '    "n": ' + f'{people}' + '\n  }\n'
             + '}')
