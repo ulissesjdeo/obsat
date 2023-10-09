@@ -13,7 +13,7 @@ def analyze(file, timestamp):
     detections = detector.detectObjectsFromImage(
         input_image=join(runenv, file),
         output_image_path=join(runenv, f'photos/{timestamp}.{file.split(".")[-1]}'),
-        minimum_percentage_probability=int(open('config/percentage.cfg', 'r').read())
+        minimum_percentage_probability=30
     )
 
     for obj in detections:

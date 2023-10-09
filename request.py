@@ -7,6 +7,6 @@ else: url = 'https://obsat.org.br/teste_post/envio.php'  # https://obsat.org.br/
 
 filename = argv[1]
 content = open(filename, 'r').read()
-request = post(url, json=content)
+request = post(url, data=content)
 
 if exists('debug.lock'): print(content)

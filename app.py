@@ -39,5 +39,5 @@ else:
 people = image.analyze(file, timestamp)
 
 with open(f'data/{timestamp}.json', 'w') as data:
-    data.write(json.finalize(battery, temperature, position, people, pression))
+    data.write(json.finalize(battery, temperature, position, people, pression, debug=DEBUG))
     data.close()
