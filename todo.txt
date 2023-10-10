@@ -1,1 +1,5 @@
 # TODO: Train my own model (https://imageai.readthedocs.io/en/latest/customdetection/index.html)
+# TODO: Previsão de ocupação próxima (próximas 2 horas)
+# TODO: Previsão de trânsito volta (próximas 2 horas)
+# TODO: Previsão de trânsito ida (próximas 2 horas)
+# TODO: Ocupação nas praias
