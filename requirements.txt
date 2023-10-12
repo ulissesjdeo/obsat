@@ -14,5 +14,4 @@ imageai==3.0.3
 requests==2.31.0
 # Production:
 smbus==1.1.post2
-picamera==1.13
 machine
