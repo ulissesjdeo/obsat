@@ -6,7 +6,8 @@ from os import makedirs
 
 if not exists('debug.lock'):
     DEBUG = False
-    from modules import battery, temperature, position, camera, json, image, pression
+    from modules import battery, temperature, position, json, image, pression
+    from subprocess import run
 else:
     DEBUG = True
     from modules import json, image
@@ -27,7 +28,8 @@ if not DEBUG:
     battery = battery.level()
     temperature = temperature.data()
     position = position.data()
-    file = camera.capture(timestamp)
+    file = f"photos/{timestamp}.jpg"
+    run(f"cd obsat && libcamera-jpeg -o {file} --nopreview --timeout 5000")
     pression = pression.pression()
 else:
     battery = 95
