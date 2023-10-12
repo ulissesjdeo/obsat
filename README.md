@@ -1,8 +1,11 @@
 # Missão Scottinik
 
 ### Referências científicas
+
 [Recreational benefits of Delaware public beaches](https://repository.library.noaa.gov/view/noaa/35668)
+
 [The Use of Mathematical Models to Predict Beach Behavior](https://www.jstor.org/stable/4300011?read-now=1&seq=5#page_scan_tab_contents)
+
 [Case Study at the Central Beach of Balneário Camboriú](https://www.jstor.org/stable/40928753?read-now=1&seq=11#page_scan_tab_contents)
 
 ### Instruções para uso
