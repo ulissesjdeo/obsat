@@ -7,8 +7,8 @@ def analyze(file, timestamp):
     amount = 0
     runenv = getcwd()
     detector = ObjectDetection()
-    detector.setModelTypeAsYOLOv3()
-    detector.setModelPath(join(runenv, 'yolov3.pt'))
+    detector.setModelTypeAsTinyYOLOv3()
+    detector.setModelPath(join(runenv, 'tiny-yolov3.pt'))
     detector.loadModel()
     detections = detector.detectObjectsFromImage(
         input_image=join(runenv, file),
