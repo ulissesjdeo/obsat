@@ -1,10 +1,7 @@
-.idea**
-.idea*
-data/**
-data/*
-photos/**
-photos/*
-yolov3.pt
-tiny-yolov3.pt
-debug.lock
 training/
+photos/
+.idea/
+data/
+debug.lock
+other/yolov3.pt
+other/tiny-yolov3.pt

@@ -7,8 +7,8 @@ def analyze(file, timestamp):
     amount = 0
     runenv = getcwd()
     detector = ObjectDetection()
-    detector.setModelTypeAsTinyYOLOv3()
-    detector.setModelPath(join(runenv, 'tiny-yolov3.pt'))
+    detector.setModelTypeAsYOLOv3()
+    detector.setModelPath(join(runenv, 'other/yolov3.pt'))
     detector.loadModel()
     detections = detector.detectObjectsFromImage(
         input_image=join(runenv, file),
@@ -19,5 +19,5 @@ def analyze(file, timestamp):
     for obj in detections:
         # noinspection PyTypeChecker
         if obj['name'] == 'person' or obj['name'] == 'umbrella':
-            amount += 1  # amount.append(f"{obj['name']} with {obj['percentage_probability']}")
+            amount += 1
     return amount

@@ -2,4 +2,5 @@
 # TODO: Previsão de ocupação próxima (próximas 2 horas)
 # TODO: Previsão de trânsito volta (próximas 2 horas)
 # TODO: Previsão de trânsito ida (próximas 2 horas)
+# TODO: Implementar monitoramento de bateria
 # TODO: Ocupação nas praias
