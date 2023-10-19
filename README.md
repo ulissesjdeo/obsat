@@ -10,32 +10,24 @@
 
 ### Instruções para uso
 
-Primeiramente, deve-se ter instalado o Python em versão 3.10 e o Git na versão mais recente. Para o terminal, estamos utilizando o Bash tanto em ambiente Windows quanto Linux e Mac, em seguida, basta clonar o repositório com o comando a seguir:
+Primeiramente, deve-se ter instalado o Python em alguma das seguintes versões: 3.9.x ou 3.10.x e o Git na versão mais recente. Para o terminal, estamos utilizando o Bash (Bourne again shell) tanto em ambiente Windows quanto Linux e Mac, em seguida, basta clonar o repositório com o comando a seguir:
 
 `git clone --depth=1 https://github.com/ulissesjdeo/obsat.git`
 
 Agora vamos entrar no diretório e então baixar e instalar todos os recursos necessários.
 
-`cd obsat`
-
-`sh other/model.sh`
+`cd obsat && sh other/model.sh`
 
 `pip install -r requirements.txt`
 
 ### Utilizando a aplicação
 
-Caso queira trabalhar com a aplicação em modo depuração, basta criar na raiz do diretório do projeto um arquivo chamado `debug.lock`, o sistema entende que se este arquivo não existir ele estará em modo de produção.
+Caso queira trabalhar com a aplicação em modo depuração, basta criar na raiz do diretório do projeto um arquivo chamado `debug.lock`, o sistema entende que se este arquivo não existir ele estará em modo de produção. O arquivo pode receber o nome de módulos separados por vírgula para desativar alguns módulos da depuração de forma individual, segue o exemplo:
 
-Quanto ao que diz respeito à URL de envio das requisições POST dos dados do satélite e do payload, em modo depuração já está definida para o servidor de testes oficial e no modo produção ela fica definida no arquivo de texto `config/address.cfg` e basta ser modificada conforme necessidade.
+`battery,position,camera,temperature,pressure,url`
 
-Para rodar a parte base da aplicação (processamento de dados), basta chamar o seguinte comando na raiz do projeto:
+Quanto ao que diz respeito à URL de envio das requisições POST dos dados do satélite e do payload, em modo depuração já está definida para o servidor de testes oficial e no modo produção ela fica definida no arquivo de texto `other/address.cfg` e basta ser modificada conforme necessidade.
+
+Para rodar a aplicação basta executar o seguinte comando tendo todos os requisitos do ambiente de forma corretamente instalada e as configurações adequadas conforme informado acima:
 
 `python app.py`
-
-Caso queira realizar apenas testes de envio com dados que já foram processados e já se encontram salvos, basta usar:
-
-`python request.py`
-
-Para executar toda a rotina de forma inteira, processando tudo e enviando conforme seria feito na prática, há um script pronto para tal, basta chamar:
-
-`./run.sh`
