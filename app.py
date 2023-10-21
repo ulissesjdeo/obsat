@@ -22,41 +22,43 @@ except FileExistsError: pass
 try: makedirs('photos')
 except FileExistsError: pass
 
-if 'battery' in debuging:
+if 'battery' not in debuging:
     battery = 95
 else:
     from modules import battery
     battery = battery.level()
 
-if 'position' in debuging:
+if 'position' not in debuging:
     position = {"g": [-0.298, -0.298, -0.298], "a": [-0.298, -0.298, -0.298]}
 else:
     from modules import position
     position = position.data()
 
-if 'camera' in debuging:
+if 'camera' not in debuging:
     file = 'other/debug.jpg'
 else:
     from subprocess import run
     file = f"photos/{timestamp}.jpg"
     run(f"cd obsat && libcamera-jpeg -o {file} --nopreview --timeout 5000")
 
-if 'temperature' in debuging:
+if 'temperature' not in debuging:
     temperature = 51.32751778398884
 else:
     from modules import bme
     temperature = bme.temperature()
 
-if 'pressure' in debuging:
+if 'pressure' not in debuging:
     pressure = 1014.824777283405
 else:
     from modules import bme
     pressure = bme.pressure()
 
-if 'url' in debuging:
+if 'url' not in debuging:
     url = 'https://obsat.org.br/teste_post/envio.php'  # https://obsat.org.br/teste_post/index.php
 else:
-    url = open('other/address.cfg', 'r').read()
+    with open('other/address.cfg', 'r') as address:
+        url = address.read()
+    address.close()
 
 people = image.analyze(file, timestamp)
 
