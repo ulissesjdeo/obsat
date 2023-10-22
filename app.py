@@ -64,11 +64,10 @@ people = image.analyze(file, timestamp)
 
 with open(f'data/{timestamp}.json', 'w') as data:
     data.write(json.finalize(battery, temperature, position, people, pressure, debug=DEBUG))
-    data.close()
+data.close()
 
 with open(max(glob('data/*'), key=getctime), 'r') as latest:
     content = latest.read()
-    latest.close()
+latest.close()
 
 request = post(url, data=content)
-if DEBUG: print(content)
