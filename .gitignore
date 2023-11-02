@@ -1,6 +1,7 @@
 modules/__pycache__/
 training/
 photos/
+.venv/
 .idea/
 data/
 debug.lock
